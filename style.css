@@ -9,3 +9,103 @@ Body {
   font-weight: 400;
   font-style: normal;
 }
+#window {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#windowheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #173642 url("background.jpeg") center / cover fixed no-repeat;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.topbar {
+  align-items: center;
+  background: rgba(27, 67, 79, 0.92);
+  border-bottom: 2px solid #00ffff;
+  color: white;
+  display: flex;
+  height: 35px;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.window-launcher {
+  cursor: pointer;
+}
+
+.window {
+  background: linear-gradient(135deg, aqua, #55dff2);
+  border: 5px solid white;
+  border-radius: 10px;
+  height: auto !important;
+  left: 50%;
+  max-height: calc(100vh - 55px);
+  max-width: 90vw;
+  overflow: auto;
+  top: calc(50% + 18px);
+  transform: translate(-50%, -50%);
+  width: min(560px, 90vw) !important;
+  z-index: 5;
+}
+
+.window-header {
+  align-items: center;
+  background: rgba(21, 78, 92, 0.95);
+  color: white;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  user-select: none;
+}
+
+.window-content button {
+  border: 1px solid #15505d;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+  padding: 6px 12px;
+}
+
+.window-content {
+  padding: 10px 20px 20px;
+  text-align: center;
+}
+
+.window-content img {
+  display: block;
+  height: auto;
+  margin: 16px auto;
+  max-width: 100%;
+}
+
+.window-content button {
+  background: white;
+}
+
+.close-link {
+  cursor: pointer;
+}

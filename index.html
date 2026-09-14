@@ -13,11 +13,11 @@
    
     updateClock();
     
-    setInterval(updateClock, 1000);d
+    setInterval(updateClock, 1000);
 </script>
 
-<div style="display: flex; justify-content: space-between; align-items: center; position: absolute; top: 0; left: 0; width: 100vw; background-color: rgba(30, 30, 30, 0.9); border-bottom: 2px solid rgb(0, 255, 255); box-sizing: border-box; padding: 6px 0; height: 35px; z-index: 999;">
-    <p style="margin: 0 0 0 20px; color: white; font-family: 'Electrolize', sans-serif; font-size: 0.95rem; font-weight: bold; letter-spacing: 1px;">
+<div style="display: flex; justify-content: space-between; align-items: center; position: absolute; top: 0; left: 0; width: 100vw; background-color: rgba(71, 116, 136, 0.9); border-bottom: 2px solid rgb(0, 255, 255); box-sizing: border-box; padding: 6px 0; height: 35px; z-index: 999;">
+    <p id="welcomeopen" class="window-launcher" style="margin: 0 0 0 20px; color: white; font-family: 'Electrolize', sans-serif; font-size: 0.95rem; font-weight: bold; letter-spacing: 1px;">
         webos
     </p>
     <p id="time" style="margin: 0 20px 0 0; color: white; font-family: 'Electrolize', sans-serif; font-size: 0.95rem;">
@@ -28,7 +28,7 @@
 
        <head>
              <meta charset="UTF-8">
-             <title>New Font Example</title>
+             <title>WEBoS</title>
 
              <link rel="preconnect" href="https://fonts.googleapis.com">
              <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,14 +38,23 @@
        
     
         <body style="background-image: url('background.jpeg');background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
-        <div style="border : 5px solid white; inline-block; padding: 10px; margin: 10px; text-align: center; font-family: 'Electrolize', sans-serif;width:fit-content; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);background-color:aqua; border-radius: 10px;">
-            <h1 style="color: #f01313 ;",>welcome to webos</h1>
-            <h2>This is Siddharth ponugumati's os</h2>
-            <p>version 1.0 first of many more to come!</p>
-            <img src="welcome_final.png"/> <img style="color: aqua;"
-         </div>
-        
-    
+        <div id="window" class="window">
+            <div id="windowheader" class="window-header">
+                <span>Welcome to webos</span>
+            </div>
+            <div class="window-content">
+           
+                <h1 style="color: #f01313;">welcome to webos</h1>
+                <h2>This is Siddharth ponugumati's os</h2>
+                <p>version 1.0 first of many more to come!</p>
+                <img src="welcome_final.png" alt="Welcome to webos" />
+                <p id="welcomeclose" class="close-link"style="position: absolute; top: 0px; right: 20px;">X</p>
+                
+            </div>
+        </div>
+            
+        <script src="script.js"></script>
+        </body>
     
 
         
