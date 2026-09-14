@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 
 <html>
+
+ <script defer>
+    function updateClock() {
+        var time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        var timetext = document.querySelector("#time");
+        if (timetext) {
+            timetext.textContent = "time: " + time;
+        }
+    }
+   
+    updateClock();
     
+    setInterval(updateClock, 1000);d
+</script>
+
+<div style="display: flex; justify-content: space-between; align-items: center; position: absolute; top: 0; left: 0; width: 100vw; background-color: rgba(30, 30, 30, 0.9); border-bottom: 2px solid rgb(0, 255, 255); box-sizing: border-box; padding: 6px 0; height: 35px; z-index: 999;">
+    <p style="margin: 0 0 0 20px; color: white; font-family: 'Electrolize', sans-serif; font-size: 0.95rem; font-weight: bold; letter-spacing: 1px;">
+        webos
+    </p>
+    <p id="time" style="margin: 0 20px 0 0; color: white; font-family: 'Electrolize', sans-serif; font-size: 0.95rem;">
+        time: Loading...
+    </p>
+</div>
+
+
        <head>
              <meta charset="UTF-8">
              <title>New Font Example</title>
@@ -13,16 +37,17 @@
         </head>
        
     
-        <body style="background-image: url('background.jpg');background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
-        <div style="border : 5px solid white; inline-block; padding: 10px; margin: 10px; text-align: center; font-family: 'Electrolize', sans-serif;width:fit-content; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);background-color: #aqua; border-radius: 10px;">
+        <body style="background-image: url('background.jpeg');background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+        <div style="border : 5px solid white; inline-block; padding: 10px; margin: 10px; text-align: center; font-family: 'Electrolize', sans-serif;width:fit-content; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);background-color:aqua; border-radius: 10px;">
             <h1 style="color: #f01313 ;",>welcome to webos</h1>
             <h2>This is Siddharth ponugumati's os</h2>
             <p>version 1.0 first of many more to come!</p>
-            <img src="welcome.jpeg"/> <img style="color: aqua;"
+            <img src="welcome_final.png"/> <img style="color: aqua;"
          </div>
         
-        </body>
-       
+    
+    
+
         
 
 </html>
