@@ -90,6 +90,11 @@ main {
   border-radius: 10px;
 }
 
+.game-window {
+  width: min(640px, 92vw);
+  top: 70px;
+}
+
 .window-header {
   display: flex;
   align-items: center;
@@ -127,4 +132,42 @@ main {
   font-weight: bold;
   cursor: pointer;
   line-height: 1;
+}
+
+.app-icon {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 90px;
+  margin: 20px;
+  cursor: pointer;
+  user-select: none; /* Prevents text highlighting when clicked */
+}
+
+
+.app-label {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding: 4px 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  word-break: break-word;
+  transition: all 0.15s ease; /* Makes the JS hover smooth */
+}
+
+.app-icon .icon-graphic {
+  transition: filter 0.15s ease;
+}
+
+.app-icon:hover .icon-graphic {
+  filter: drop-shadow(0 0 8px #009fff);
+}
+
+.app-icon:hover .app-label {
+  background-color: #007acc;
+  border-color: #009fff;
+  box-shadow: 0 0 8px rgba(0, 159, 255, 0.6);
 }

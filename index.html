@@ -52,9 +52,22 @@
                 
             </div>
         </div>
+        <div id="game-window" class="window game-window" style="display: none;">
+            <div id="game-window-header" class="window-header">
+                <span>Random number game</span>
+            </div>
+            <div class="window-content">
+                <h1>Random number game</h1>
+                <p>Guess a number between 1 and 10.</p>
+                <input id="number-guess" type="number" min="1" max="10" />
+                <button id="guess-button" type="button">Guess</button>
+                <p id="game-message">Make your guess.</p>
+                <p id="gameclose" class="close-link" style="position: absolute; top: 0px; right: 20px;">X</p>
+            </div>
+        </div>
 <div id="desktop apps" style="padding-top: 100px; height: 100%;">
   
-  <div class="app-icon" id="welcomeopen">
+  <div class="app-icon" id="gameopen">
     <img src="guess_the_number.png" id="guess_the_number" class="icon-graphic" style="width: 50px; height: 50px;" />
     
     
