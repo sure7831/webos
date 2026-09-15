@@ -14,8 +14,23 @@ welcomeScreenClose.addEventListener("click", function() {
   closeWindow(welcomeScreen);
 });
 
-welcomeScreenOpen.addEventListener("click", function() {
-  openWindow(welcomeScreen);
+
+const icons = document.querySelectorAll('.app-icon');
+
+
+icons.forEach(icon => {
+  const label = icon.querySelector('.app-label');
+
+  
+  icon.addEventListener('mouseenter', () => {
+    label.style.backgroundColor = '#007acc';
+    label.style.borderColor = '#009fff';
+  });
+
+  icon.addEventListener('mouseleave', () => {
+    label.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+    label.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+  });
 });
 
 function dragElement(element) {
